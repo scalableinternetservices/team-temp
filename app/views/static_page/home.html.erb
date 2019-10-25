@@ -1,0 +1,41 @@
+<!--<h1>StaticPage#home</h1>-->
+<!--<p>Find me in app/views/static_page/home.html.erb</p>-->
+
+
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Home Page </title>
+  </head>
+  <body>
+    <h1>Study App</h1>
+    <p>
+      <%= @message %>
+    </p>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Add Question",   '#' %></li>
+      </ul>
+    </nav>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @questions.each do |question| %>
+          <tr>
+            <td><%= question.description %></td>
+            <td><%= link_to 'Show', question %></td>
+            <td><%= link_to 'Edit', edit_question_path(question) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>  
+  </body>
+</html>
