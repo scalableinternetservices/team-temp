@@ -4,38 +4,32 @@
 
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= yield(:title) %> | Home Page </title>
-  </head>
-  <body>
-    <h1>Study App</h1>
-    <p>
-      <%= @message %>
-    </p>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Add Question",   '#' %></li>
-      </ul>
-    </nav>
-    
-    <table>
-      <thead>
+  <nav>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Add Question",   '#' %></li>
+    </ul>
+  </nav>
+  
+  <h1>Study App</h1>
+  <p>
+    <%= @message %>
+  </p>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @questions.each do |question| %>
         <tr>
-          <th>Description</th>
-          <th colspan="2"></th>
+          <td><%= question.description %></td>
+          <td><%= link_to 'Show', question %></td>
+          <td><%= link_to 'Edit', edit_question_path(question) %></td>
         </tr>
-      </thead>
-    
-      <tbody>
-        <% @questions.each do |question| %>
-          <tr>
-            <td><%= question.description %></td>
-            <td><%= link_to 'Show', question %></td>
-            <td><%= link_to 'Edit', edit_question_path(question) %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>  
-  </body>
-</html>
+      <% end %>
+    </tbody>
+  </table>  
