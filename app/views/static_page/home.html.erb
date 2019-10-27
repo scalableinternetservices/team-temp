@@ -4,38 +4,35 @@
 
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= yield(:title) %> | Home Page </title>
-  </head>
-  <body>
-    <h1>Study App</h1>
-    <p>
-      <%= @message %>
-    </p>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Add Question",   '#' %></li>
-      </ul>
-    </nav>
-    
-    <table>
-      <thead>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="background-color: transparent !important;">Team Temp</a>
+  </nav>
+  
+  <h1>Study App</h1>
+  <p>
+    <%= @message %>
+  </p>
+  
+  <ul>
+    <li><%= link_to "Add Question",   '#' %></li>
+  </ul>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @questions.each do |question| %>
         <tr>
-          <th>Description</th>
-          <th colspan="2"></th>
+          <td><%= question.description %></td>
+          <td><%= link_to 'Show', question %></td>
+          <td><%= link_to 'Edit', edit_question_path(question) %></td>
         </tr>
-      </thead>
-    
-      <tbody>
-        <% @questions.each do |question| %>
-          <tr>
-            <td><%= question.description %></td>
-            <td><%= link_to 'Show', question %></td>
-            <td><%= link_to 'Edit', edit_question_path(question) %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>  
-  </body>
-</html>
+      <% end %>
+    </tbody>
+  </table>
+  
