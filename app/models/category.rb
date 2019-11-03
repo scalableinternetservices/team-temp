@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  belongs_to :question
-  validates :name, length: { maximum: 400 }, presence: true
+  validates :name, length: { maximum: 400 }, uniqueness: true, presence: true
+  has_many :questions
 end
