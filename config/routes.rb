@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'users/new'
   root 'static_page#home'
   get 'static_page/home'
+  get 'categories/new'
+  get 'categories/:id', to: 'categories#show'
   
   # Users Routes
   get '/signup', to: 'users#new'
@@ -14,5 +16,6 @@ Rails.application.routes.draw do
   
   resources :answers
   resources :questions
+  resources :categories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

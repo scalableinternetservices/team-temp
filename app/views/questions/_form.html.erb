@@ -15,6 +15,12 @@
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
+  
+  <div class="field">
+      <%= form.label :category %>
+      <%= form.number_field :category_id, id: :question_category_id %>
+  </div>
+
 
   <div class="actions">
     <%= form.submit %>
