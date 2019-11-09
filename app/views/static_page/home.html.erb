@@ -8,27 +8,34 @@
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#" style="background-color: transparent !important;">Team Temp</a>
+    <div><a class="navbar-brand" href="#" style="background-color: transparent !important;">Team Temp</a></div>
+    <div class="navbar-nav ml-auto">
+      <div class="user-bar">
+        <span class="usopt"><%= link_to "Login", '/sessions/new', class: "hoftc" %></span>
+        <span class="hoftc">|</span>
+        <span class="usopt"><%= link_to "Sign up", '/users/new', class: "hoftc" %></span>
+      </div>
+    </div>
   </nav>
   
-  <h1>Study App</h1>
-  <p>
-    <%= @message %>
-  </p>
-  
-  <ul>
-    <li><%= link_to "Login",   '/sessions/new' %></li>
-    <li><%= link_to "Add Question",   '/questions/new' %></li>
-  </ul>
+  <section>
+    <div id="banner">
+      <div class="container">
+        <div class="intr">
+          <h1 class="hoftc hohdr">Study App</h1>
+          <div class="hoftc hohds">Stuck on homeworks? Need study buddies? Don't know how to prepare for exams? It's all in one place!</div>
+        </div>
+        <div class="srchbrhd">
+          <form class="form-inline my-2 my-lg-0">
+            <input id="srchbar" class="form-control mr-sm-2" type="search" placeholder="Search Subjects" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <table>
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th colspan="2"></th>
-      </tr>
-    </thead>
-  
     <tbody>
       <% @questions.each do |question| %>
         <tr>
@@ -39,4 +46,13 @@
       <% end %>
     </tbody>
   </table>
+  
+  <div id="nqct">
+    <a id="adqlnk" href="/questions/new">
+      <span id="adqic">
+        <%= image_tag("icons/icon-idea.png", :alt => "Add Questin Icon") %>
+      </span>
+      <span id="adqlb">New Question!</span>
+    </a>
+  </div>
   

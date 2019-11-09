@@ -1,3 +1,84 @@
 // Place all the styles related to the StaticPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.usopt {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 12px 0px 12px;
+}
+
+.user-bar a {
+  color: #f8f8f8;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
+.hoftc {
+  color: #f8f8f8;
+}
+
+.hohdr {
+  font-family: Arial, Helvetica, snas-serif;
+  font-size: 56px;
+  margin: 24px 0px 0px -24px;
+}
+
+.hohds {
+  font-family: Arial, Helvetica, snas-serif;
+  font-size: 24px;
+  margin-left: -24px;
+  word-wrap: break-word;
+  width: 520px;
+}
+
+#banner {
+  background-image: image-url('backgrounds/background-home.jpg');
+  height: 450px;
+  width: 100%;
+  border-top: 4px solid green;
+}
+
+.srchbrhd {
+  padding: 52px 0px 0px 0px;
+}
+
+.srchbrhd form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.srchbrwr {
+  
+}
+
+#srchbar {
+  width: 480px;
+}
+
+#nqct {
+  position: fixed;
+  display: block;
+  bottom: 28px;
+  left: 12px;
+  opacity: 0.8;
+  border-radius: 6px;
+  //background: #f2eee5;
+  background: #bbeaa6;
+}
+
+#adqlnk:hover {
+  text-decoration: none;
+}
+
+#adqic {
+  display: inline-block;
+  margin: 12px 0px 12px 12px;
+  width: 28px;
+  height: 28px;
+}
+
+#adqlb {
+  padding: 0px 12px 2px 0px;
+}
