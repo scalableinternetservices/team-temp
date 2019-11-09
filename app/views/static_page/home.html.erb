@@ -35,17 +35,31 @@
     </div>
   </section>
   
-  <table>
-    <tbody>
+  <div class="container">
+    <div id="questions">
       <% @questions.each do |question| %>
-        <tr>
-          <td><%= question.description %></td>
-          <td><%= link_to 'Show', question %></td>
-          <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        </tr>
+        <div class="qsumry">
+          <div class="stsct">
+            <div class="stats">
+              <div class="vote">
+                <span class="vtcnt"><strong>0</strong></span>
+                <div>votes</div>
+              </div>
+              <div class="status">
+                <strong>1</strong>
+                <div>views</div>
+              </div>
+            </div>
+          </div>
+          <div class="sumry">
+            <h3>
+              <%= link_to question.description, question, class: "qlnk" %>
+            </h3>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+  </div>
   
   <div id="nqct">
     <a id="adqlnk" href="/questions/new">
