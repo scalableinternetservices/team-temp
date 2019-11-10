@@ -1,19 +1,43 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "user_forms" %>
+<% end %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div><a class="navbar-brand" href="/" style="background-color: transparent !important;">Team Temp</a></div>
+  <div class="navbar-nav ml-auto">
+    <div class="user-bar">
+      <span class="usopt"><%= link_to "Login", '/sessions/new', class: "hoftc" %></span>
+      <span class="hoftc">|</span>
+      <span class="usopt"><%= link_to "Sign up", '/users/new', class: "hoftc" %></span>
+    </div>
   </div>
-</div>
+</nav>
+
+<section id="main">
+  <div class="container">
+    <div class="usrfwrp">
+      <h1>Create Your Study App Account</h1>
+    </div>
+    <div class="usrfc">
+      <%= form_for(@user) do |f| %>
+        <div class="fldwrp">
+          <%= f.label :username %>
+          <%= f.text_field :username %>
+        </div>
+        <div class="fldwrp">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+        <div class="fldwrp">
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="btnwrp">
+          <%= f.submit "Create my account", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+      <p>Click <%= link_to "Here", "/" %> to go back!</p>
+    </div>
+  </div>
+</section>

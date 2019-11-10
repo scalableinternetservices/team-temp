@@ -1,0 +1,68 @@
+body {
+  background: #eff0f1;
+}
+
+#main {
+  margin-top: 3%;
+}
+
+.usrfwrp {
+  width: 50%;
+  margin: auto;
+}
+
+.usrfwrp h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+}
+
+.usrfc {
+  background-color: #fff;
+  margin: auto;
+  width: 40%;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.usrfc form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: inherit;
+}
+
+.usrfc p {
+  margin-top: 5px;
+}
+
+.usrfc p a:visited {
+  color: #007bff;
+}
+
+.fldwrp {
+  width: 100%;
+  margin: 6px 0px 6px 0px;
+}
+
+.fldwrp label {
+  font-weight: 700;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  color: #0c0d0e;
+}
+
+.fldwrp input {
+  width: 100%;
+  position: relative;
+}
+
+.btnwrp {
+  margin: 6px 0px 0px 0px;
+  width: 100%;
+}
+
+.btnwrp input {
+  margin: 6px 0px 0px 0px;
+  width: 100%;
+}
