@@ -1,0 +1,193 @@
+/* line 5, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.usopt {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 12px 0px 12px;
+}
+
+/* line 10, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.user-bar a {
+  color: #f8f8f8;
+}
+
+/* line 14, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+a:hover {
+  background-color: transparent;
+}
+
+/* line 18, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.hoftc {
+  color: #f8f8f8;
+}
+
+/* line 22, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.hohdr {
+  font-family: Arial, Helvetica, snas-serif;
+  font-size: 56px;
+  margin: 24px 0px 0px -24px;
+}
+
+/* line 28, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.hohds {
+  font-family: Arial, Helvetica, snas-serif;
+  font-size: 24px;
+  margin-left: -24px;
+  word-wrap: break-word;
+  width: 520px;
+}
+
+/* line 36, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#banner {
+  background-image: url(/assets/backgrounds/background-home-e46ab26f6e3e58d2c9ef58634f26211c5c9876d49e7d7039980da31eb6f39d8d.jpg);
+  height: 450px;
+  width: 100%;
+  border-top: 4px solid green;
+}
+
+/* line 43, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.srchbrhd {
+  padding: 52px 0px 0px 0px;
+}
+
+/* line 47, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.srchbrhd form {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* line 56, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#srchbar {
+  width: 480px;
+}
+
+/* line 60, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#questions {
+  width: auto;
+  float: none;
+  margin-top: 36px;
+}
+
+/* line 66, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.qsumry {
+  padding: 12px 8px 12px 8px;
+  box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  float: none;
+  min-width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #eff0f1;
+}
+
+/* line 78, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.stsct {
+  margin-left: 8px;
+  margin-right: 16px;
+  width: 58px;
+  float: none;
+  font-size: 11px;
+  color: #6a737c;
+  flex-shrink: 0;
+}
+
+/* line 88, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.stats {
+  width: 58px;
+  margin: 0;
+}
+
+/* line 93, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.vote {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* line 98, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.vote span {
+  display: block;
+  color: #6a737c;
+}
+
+/* line 103, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.vtcnt {
+  font-size: 20px;
+}
+
+/* line 107, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.status {
+  padding: 7px 0 5px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* line 114, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.status strong {
+  font-size: 20px;
+}
+
+/* line 118, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.sumry {
+  -webkit-box-flex: 1;
+          flex: 1 auto;
+  width: auto;
+  float: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* line 126, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.sumry h3 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: .5em;
+}
+
+/* line 135, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.qlnk {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #005999;
+  line-height: 1.3;
+  margin-bottom: 1.2em;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* line 144, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.qlnk:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 149, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#nqct {
+  position: fixed;
+  display: block;
+  bottom: 28px;
+  left: 12px;
+  opacity: 0.8;
+  border-radius: 6px;
+  background: #bbeaa6;
+}
+
+/* line 160, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#adqlnk:hover {
+  text-decoration: none;
+}
+
+/* line 164, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#adqic {
+  display: inline-block;
+  margin: 12px 0px 12px 12px;
+  width: 28px;
+  height: 28px;
+}
+
+/* line 171, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#adqlb {
+  padding: 0px 12px 2px 0px;
+}

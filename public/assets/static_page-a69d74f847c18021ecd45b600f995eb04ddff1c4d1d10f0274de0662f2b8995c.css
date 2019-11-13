@@ -1,0 +1,33 @@
+/* line 5, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.container {
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+}
+
+/* line 11, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.usopt {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 12px 0px 12px;
+}
+
+/* line 16, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.uselem {
+  color: #f8f8f8;
+}
+
+/* line 20, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.user-bar a {
+  color: #f8f8f8;
+}
+
+/* line 25, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+.user-bar a:hover {
+  background-color: transparent;
+  color: #f8f8f8;
+}
+
+/* line 30, /home/ubuntu/environment/team-temp/app/assets/stylesheets/static_page.scss */
+#pangzi {
+  background-image: url(/assets/background-home-664cdba1c55fcf78709dffe0d502fd6184ba079447fb7ec51ea15578550a4d91.jpg);
+}

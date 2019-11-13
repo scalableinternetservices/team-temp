@@ -1,39 +1,72 @@
 <!--<h1>StaticPage#home</h1>-->
 <!--<p>Find me in app/views/static_page/home.html.erb</p>-->
 
+<% content_for :head do %>
+  <%= stylesheet_link_tag "static_page" %>
+<% end %>
 
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#" style="background-color: transparent !important;">Team Temp</a>
+    <div><a class="navbar-brand" href="#" style="background-color: transparent !important;">Team Temp</a></div>
+    <div class="navbar-nav ml-auto">
+      <div class="user-bar">
+        <span class="usopt"><%= link_to "Login", '/sessions/new', class: "hoftc" %></span>
+        <span class="hoftc">|</span>
+        <span class="usopt"><%= link_to "Sign up", '/users/new', class: "hoftc" %></span>
+      </div>
+    </div>
   </nav>
   
-  <h1>Study App</h1>
-  <p>
-    <%= @message %>
-  </p>
+  <section>
+    <div id="banner">
+      <div class="container">
+        <div class="intr">
+          <h1 class="hoftc hohdr">Study App</h1>
+          <div class="hoftc hohds">Stuck on homeworks? Need study buddies? Don't know how to prepare for exams? It's all in one place!</div>
+        </div>
+        <div class="srchbrhd">
+          <form class="form-inline my-2 my-lg-0">
+            <input id="srchbar" class="form-control mr-sm-2" type="search" placeholder="Search Subjects" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   
-  <ul>
-    <li><%= link_to "Login",   '/sessions/new' %></li>
-    <li><%= link_to "Add Question",   '/questions/new' %></li>
-  </ul>
-  
-  <table>
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th colspan="2"></th>
-      </tr>
-    </thead>
-  
-    <tbody>
+  <div class="container">
+    <div id="questions">
       <% @questions.each do |question| %>
-        <tr>
-          <td><%= question.description %></td>
-          <td><%= link_to 'Show', question %></td>
-          <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        </tr>
+        <div class="qsumry">
+          <div class="stsct">
+            <div class="stats">
+              <div class="vote">
+                <span class="vtcnt"><strong>0</strong></span>
+                <div>votes</div>
+              </div>
+              <div class="status">
+                <strong>1</strong>
+                <div>answers</div>
+              </div>
+            </div>
+          </div>
+          <div class="sumry">
+            <h3>
+              <%= link_to question.description, question, class: "qlnk" %>
+            </h3>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+  </div>
+  
+  <div id="nqct">
+    <a id="adqlnk" href="/questions/new">
+      <span id="adqic">
+        <%= image_tag("icons/icon-idea.png", :alt => "Add Questin Icon") %>
+      </span>
+      <span id="adqlb">New Question!</span>
+    </a>
+  </div>
   
