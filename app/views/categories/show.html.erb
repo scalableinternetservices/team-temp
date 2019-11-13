@@ -1,0 +1,19 @@
+<% provide(:title, @category.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="category_info">
+      <h1>
+        <%= @category.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @category.questions.any? %>
+      <h3>Questions (<%= @category.questions.count %>)</h3>
+      <ol class="questions">
+        <%= render @questions %>
+      </ol>
+      <%= will_paginate @questions %>
+    <% end %>
+  </div>
+</div>
