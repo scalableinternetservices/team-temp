@@ -2,10 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails',      '6.0.0'
+gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt',     '3.1.12'
-gem 'bootstrap', '~> 4.3.1'
 gem 'will_paginate', '3.1.6'
-gem 'bootstrap-will_paginate', '1.0.0'
 gem 'jquery-rails'
 gem 'puma',       '3.12.1'
 gem 'sass-rails', '5.1.0'
