@@ -1,3 +1,14 @@
-<p>
-    <strong>Profile Page</strong>
-</p>
+<% provide(:title, "Profile") %>
+
+<!DOCTYPE html>
+<div class="username">
+    Welcome, <%= @user.username %>!
+</div>
+
+<div class="questions">
+    <% @questions.each do |question| %>
+        <div class="question_description">
+            question.description
+        </div>
+    <% end %>
+</div>

@@ -11,7 +11,11 @@
     <div><a class="navbar-brand" href="#" style="background-color: transparent !important;">Team Temp</a></div>
     <div class="navbar-nav ml-auto">
       <div class="user-bar">
-        <span class="usopt"><%= link_to "Login", '/sessions/new', class: "hoftc" %></span>
+        <% if @session_loggedin %>
+          <span class="usopt"><%= link_to "Logout", logout_path, method: :delete, class: "hoftc" %></span>
+        <% else %>
+          <span class="usopt"><%= link_to "Login", '/sessions/new', class: "hoftc" %></span>
+        <% end %>
         <span class="hoftc">|</span>
         <span class="usopt"><%= link_to "Sign up", '/users/new', class: "hoftc" %></span>
       </div>
@@ -61,6 +65,7 @@
     </div>
   </div>
   
+<% if @session_loggedin %>
   <div id="nqct">
     <a id="adqlnk" href="/questions/new">
       <span id="adqic">
@@ -69,4 +74,7 @@
       <span id="adqlb">New Question!</span>
     </a>
   </div>
+<% else %>
+  <dev>Login to add question. </dev>
+<% end %>
   
