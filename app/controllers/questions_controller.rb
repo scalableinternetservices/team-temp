@@ -25,13 +25,15 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(question_params)
+    @question.user_id = current_user.id
+    @question.category_id = question_params[:category_id]
 
     respond_to do |format|
       if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
+        format.html { redirect_to @question }
         format.json { render :show, status: :created, location: @question }
       else
-        format.html { render :new }
+        format.html { render :new, notice: 'Question cannot be created' }
         format.json { render json: @question.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +71,6 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:description, :category_id)
+      params.require(:question).permit(:description, :category_id, :user_id)
     end
 end
