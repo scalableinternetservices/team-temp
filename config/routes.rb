@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   
+  get '/questions', to: 'questions#new'
+  post '/questions', to: 'questions#create'
+  
   resources :answers
   resources :questions
   resources :categories
