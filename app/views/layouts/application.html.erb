@@ -21,9 +21,9 @@
           <span class="uspot"><%= link_to "Logout", logout_path, method: :delete, class: "hoftc" %></span>
         <% else %>
           <span class="usopt"><%= link_to "Login", '/sessions/new', class: "hoftc" %></span>
+          <span class="hoftc">|</span>
+          <span class="usopt"><%= link_to "Sign up", '/users/new', class: "hoftc" %></span>
         <% end %>
-        <span class="hoftc">|</span>
-        <span class="usopt"><%= link_to "Sign up", '/users/new', class: "hoftc" %></span>
       </div>
     </div>
   </nav>
