@@ -26,6 +26,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.user_id = current_user.id
+    @question.category_id = question_params[:category_id]
 
     respond_to do |format|
       if @question.save
