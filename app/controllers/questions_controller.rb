@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show, :edit, :update, :destroy, :like, :unlike]
 
   # GET /questions
   # GET /questions.json
@@ -63,6 +63,14 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def like
+    @question.liked_by current_user
+  end
+  
+  def unlike
+    @question.unliked_by current_user
+  end 
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
