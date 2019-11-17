@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: [:show, :edit, :update, :destroy]
+  before_action :set_answer, only: [:show, :edit, :update, :destroy, :like]
 
   # GET /answers
   # GET /answers.json
@@ -54,6 +54,15 @@ class AnswersController < ApplicationController
       end
     end
   end
+  
+  def like
+    @answer.liked_by current_user
+  end
+  
+  def unlike
+    @answer.unliked_by current_user
+  end 
+  
 
   # DELETE /answers/1
   # DELETE /answers/1.json
