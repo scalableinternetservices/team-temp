@@ -31,11 +31,11 @@
           <div class="stsct">
             <div class="stats">
               <div class="vote">
-                <span class="vtcnt"><strong><% question %></strong></span>
+                <span class="vtcnt"><strong><%= question.get_likes.size %></strong></span>
                 <div>votes</div>
               </div>
               <div class="status">
-                <strong><% question.answers.count %></strong>
+                <strong><%= question.answers.count %></strong>
                 <div>answers</div>
               </div>
             </div>
