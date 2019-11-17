@@ -65,6 +65,7 @@ class QuestionsController < ApplicationController
 
   def like
     @question.liked_by current_user
+    render layout: false
   end
   
   def unlike
