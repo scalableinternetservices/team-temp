@@ -1,0 +1,84 @@
+/* line 1, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+body {
+  background: #eff0f1;
+}
+
+/* line 5, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+#mainfrm {
+  margin-top: 3%;
+}
+
+/* line 9, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.frmhddr {
+  width: 50%;
+  margin: auto;
+}
+
+/* line 14, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.frmhddr h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+}
+
+/* line 20, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.usrfc {
+  background-color: #fff;
+  margin: auto;
+  width: 40%;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* line 28, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.usrfc form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  box-sizing: inherit;
+}
+
+/* line 34, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.usrfc p {
+  margin-top: 5px;
+}
+
+/* line 38, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.usrfc p a:visited {
+  color: #007bff;
+}
+
+/* line 42, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.fldwrp {
+  width: 100%;
+  margin: 6px 0px 6px 0px;
+}
+
+/* line 47, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.fldwrp label {
+  font-weight: 700;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  color: #0c0d0e;
+}
+
+/* line 55, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.fldwrp input {
+  width: 100%;
+  position: relative;
+}
+
+/* line 60, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.btnwrp {
+  margin: 6px 0px 0px 0px;
+  width: 100%;
+}
+
+/* line 65, /home/ubuntu/environment/team-temp/app/assets/stylesheets/user_forms.scss */
+.btnwrp input {
+  margin: 6px 0px 0px 0px;
+  width: 100%;
+}

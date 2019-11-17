@@ -1,0 +1,18 @@
+/* line 1, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+body {
+  background: #eff0f1;
+}
+
+/* line 9, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+#adqc {
+  background: #fff;
+  -webkit-box-flex: 1;
+          flex: 1 auto;
+  vertical-align: baseline;
+  display: block;
+  text-align: left;
+  box-sizing: inherit;
+  width: 100%;
+  padding: 24px;
+  border-radius: 8px;
+}

@@ -16,4 +16,4 @@ Rails.application.config.assets.precompile += %w(static_page.scss)
 Rails.application.config.assets.precompile += %w(user_forms.scss)
 Rails.application.config.assets.precompile += %w(user_profile.scss)
 Rails.application.config.assets.precompile += %w(navbar.scss)
-
+Rails.application.config.assets.precompile += %w(question_forms.scss)

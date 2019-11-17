@@ -1,5 +1,37 @@
-<h1>New Question</h1>
 
-<%= render 'form', question: @question %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "question_forms" %>
+<% end %>
 
-<%= link_to 'Back', questions_path %>
+<section id="mainfrm">
+    <div class="container">
+        <div class="frmhddr">
+            <h1>Ask a New Question</h1>
+        </div>
+        <div class="adqcwrp">
+            <div class="adqc">
+                <%= form_for(:question, url: questions_path) do |q| %>
+                    <div class="fldwrp">
+                        <%= q.label :title %>
+                        <%= q.text_field :title %> 
+                    </div>               
+                    <div class="fldwrp">
+                        <%= q.label :description %>
+                        <textarea name="question[description]" id="question_description" maxlength="400" rows="8"></textarea>
+                    </div>
+                    <div class="fldwrp fldcateg">
+                        <%= q.label :category_id %>
+                        <%= q.text_field :category_id %>
+                    </div>
+                    <span>Click <a href="/categories/new" target="_blank">here</a> to add a category</span>
+                    <div class="btnwrp categbtn">
+                        <%= q.submit "Create", class: "btn btn-primary" %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%= link_to "Back", questions_path %>
