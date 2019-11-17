@@ -4,11 +4,28 @@
 <% end %>
 
 <section id="adqs">
-  <div class="container">
-    <h1>New Question</h1>
-
-    <%= render 'form', question: @question %>
-
-    <%= link_to 'Back', questions_path %>
-  </div>
+    <div class="container">
+        <div class="adhdr">
+            <h1>Ask a New Question</h1>
+        </div>
+        <div class="adqcwrp">
+            <div id="adqc">
+                <%= render 'form', question: @question %>
+            </div>
+        </div>
+    </div>
 </section>
+
+<%= form_for(:question, url: questions_path) do |q| %>
+    <%= q.label :description %>
+    <%= q.text_field :description %>
+    <%= q.submit "Create" %>
+<% end %>
+
+<%= form_tag(questions_path, method: "post") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+<% end %>
+
+<%= link_to "Back", questions_path %>
