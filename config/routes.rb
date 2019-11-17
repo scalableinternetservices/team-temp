@@ -17,12 +17,12 @@ Rails.application.routes.draw do
   
   get '/questions', to: 'questions#new'
   post '/questions', to: 'questions#create'
- # post '/questions/:id/like', to: 'questions#like'
-  
+
   resources :answers 
   resources :questions do
     member do
-     put 'like' => 'questions#like'
+     put 'like', to: 'questions#like'
+     put 'unlike', to: 'questions#unlike'
     end
   end
   resources :categories

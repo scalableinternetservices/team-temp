@@ -65,11 +65,12 @@ class QuestionsController < ApplicationController
 
   def like
     @question.liked_by current_user
-    render layout: false
+    redirect_to @question
   end
   
   def unlike
     @question.unliked_by current_user
+    redirect_to @question
   end 
   
   private
