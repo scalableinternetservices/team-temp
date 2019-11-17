@@ -3,29 +3,24 @@
   <%= stylesheet_link_tag "question_forms" %>
 <% end %>
 
-<section id="adqs">
+<section id="mainfrm">
     <div class="container">
-        <div class="adhdr">
+        <div class="frmhddr">
             <h1>Ask a New Question</h1>
         </div>
         <div class="adqcwrp">
             <div id="adqc">
-                <%= render 'form', question: @question %>
+                <%= form_for(:question, url: questions_path) do |q| %>
+                    <div class="fldwrp">
+                        <%= q.label :description %>
+                        <%= q.text_field :description %> 
+                    </div>
+                    <%= q.submit "Create" %>
+                <% end %>
             </div>
         </div>
     </div>
 </section>
 
-<%= form_for(:question, url: questions_path) do |q| %>
-    <%= q.label :description %>
-    <%= q.text_field :description %>
-    <%= q.submit "Create" %>
-<% end %>
-
-<%= form_tag(questions_path, method: "post") do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-<% end %>
 
 <%= link_to "Back", questions_path %>
