@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   
   get '/questions', to: 'questions#new'
   post '/questions', to: 'questions#create'
+ 
+  get '/categories', to: 'categories#new'
+  post '/categories', to: 'categories#create'
 
   resources :answers 
   resources :questions do

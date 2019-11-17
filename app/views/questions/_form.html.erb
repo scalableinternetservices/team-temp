@@ -11,16 +11,33 @@
     </div>
   <% end %>
 
+
+  <!--Question description-->
+
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
-  
+
+
+  <!--Category dropdown selection-->
+
   <div class="field">
-      <%= form.label :category %>
-      <%= form.number_field :category_id, id: :question_category_id %>
+    <%= form.label :category %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, prompt: "Please select a category" %>
   </div>
 
+
+  <!--Add Category button-->
+
+  <div id="nqct">
+    <a id="adqlnk" href="/categories/new">
+      <span id="adqic">
+        <%= image_tag("icons/icon-idea.png", :alt => "Add Category Icon") %>
+      </span>
+      <span id="adqlb">Add Category!</span>
+    </a>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
