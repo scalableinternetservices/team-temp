@@ -21,8 +21,8 @@
                     </div>
                     <div class="fldwrp fldcateg">
                         <%= q.label :category_id %>
-                        <%= q.text_field :category_id %>
-                    </div>
+                        <%= q.collection_select :category_id, Category.all, :id, :name, prompt: "Please select a category" %>
+                     </div>
                     <span>Click <a href="/categories/new" target="_blank">here</a> to add a category</span>
                     <div class="btnwrp categbtn">
                         <%= q.submit "Create", class: "btn btn-primary" %>
