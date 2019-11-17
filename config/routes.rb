@@ -17,12 +17,17 @@ Rails.application.routes.draw do
   
   get '/questions', to: 'questions#new'
   post '/questions', to: 'questions#create'
-  
+ 
   get '/categories', to: 'categories#new'
   post '/categories', to: 'categories#create'
 
-  resources :answers
-  resources :questions
+  resources :answers 
+  resources :questions do
+    member do
+     put 'like', to: 'questions#like'
+     put 'unlike', to: 'questions#unlike'
+    end
+  end
   resources :categories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
