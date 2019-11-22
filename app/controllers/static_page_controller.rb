@@ -3,7 +3,7 @@ class StaticPageController < ApplicationController
   
   def home
     @message = "Welcome to our study app!"
-    @questions = Question.all
+    @questions = Question.search(params[:search])
     @session_loggedin = logged_in?
   end
 end

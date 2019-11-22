@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:search])
+    @category = Category.find(params[:id])
     @questions = @category.questions #.paginate(page: params[:page])
   end
   
@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
   end
   
   def search
-    @category = Category.search(params[:search])
+    @category = Category.search(params[:id])
   end
   
   private
