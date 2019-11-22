@@ -45,8 +45,9 @@ class AnswersController < ApplicationController
   # PATCH/PUT /answers/1.json
   def update
     respond_to do |format|
-      if @answer.update(answer_params)
-        format.html { redirect_to @answer, notice: 'Answer was successfully updated.' }
+      if @answer.update(simple_answer_params)
+        qnid = @answer.question_id
+        format.html { redirect_to "/questions/#{qnid}", notice: 'Answer was successfully updated.' }
         format.json { render :show, status: :ok, location: @answer }
       else
         format.html { render :edit }
@@ -59,9 +60,10 @@ class AnswersController < ApplicationController
   # DELETE /answers/1
   # DELETE /answers/1.json
   def destroy
+    qnid = @answer.question_id
     @answer.destroy
     respond_to do |format|
-      format.html { redirect_to answers_url, notice: 'Answer was successfully destroyed.' }
+      format.html { redirect_to "/questions/#{qnid}", notice: 'Answer was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,5 +77,9 @@ class AnswersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def answer_params
       params.require(:answer).permit(:description, :question_id)
+    end
+    
+    def simple_answer_params
+      params.require(:answer).permit(:description)
     end
 end

@@ -19,7 +19,9 @@
 
 <% @answers.each do |answer| %>
   <div class="ansctnr">
-     <div><%= answer.user_id %></div>
-    <div><%= answer.description %></div>   
+    <div><%= answer.user_id %></div>
+    <div><%= answer.description %></div>
+    <%= link_to "Edit", edit_answer_path(answer) %>
+    <%= link_to "Delete", "/answers/#{answer.id}", method: "delete" %>
   </div>
 <% end %>
