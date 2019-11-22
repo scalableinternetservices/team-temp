@@ -12,3 +12,8 @@
 <%= link_to 'Add Answer', new_answer_path({:qn_id => @question.id}) %> | 
 <%= link_to 'Like', like_question_path(@question), method: "put" %> |
 <%= link_to 'Unlike', unlike_question_path(@question), method: "put" %>
+
+<% @answers.each do |answer| %>
+  <div><%= answer.user_id %></div>
+  <div><%= answer.description %></div>
+<% end %>
