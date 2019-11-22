@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "questions" %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -12,3 +16,12 @@
 <%= link_to 'Add Answer', new_answer_path({:qn_id => @question.id}) %> | 
 <%= link_to 'Like', like_question_path(@question), method: "put" %> |
 <%= link_to 'Unlike', unlike_question_path(@question), method: "put" %>
+
+<% @answers.each do |answer| %>
+  <div class="ansctnr">
+    <div><%= answer.user_id %></div>
+    <div><%= answer.description %></div>
+    <%= link_to "Edit", edit_answer_path(answer) %>
+    <%= link_to "Delete", "/answers/#{answer.id}", method: "delete" %>
+  </div>
+<% end %>
