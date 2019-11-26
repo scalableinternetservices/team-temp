@@ -20,6 +20,16 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  
+    # DELETE 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to "/users}", notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 
   private
 

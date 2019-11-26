@@ -23,6 +23,15 @@ class CategoriesController < ApplicationController
     end
   end
   
+  def destroy
+    @category = Category.new(category_params)
+    @category.destroy
+    respond_to do |format|
+      format.html { redirect_to "/categories}", notice: 'Category was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+  
   private
     def category_params
       params.require(:category).permit(:name)
