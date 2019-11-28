@@ -3,7 +3,8 @@ class StaticPageController < ApplicationController
   
   def home
     @message = "Welcome to our study app!"
-    @questions = Question.all
+    #@questions = Question.all
+    @questions = Question.paginate(page: params[:page], per_page: 1)
     @session_loggedin = logged_in?
   end
 end
