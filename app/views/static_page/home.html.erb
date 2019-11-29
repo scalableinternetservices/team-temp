@@ -27,25 +27,27 @@
   <div class="container">
     <div id="questions">
       <% @questions.each do |question| %>
-        <div class="qsumry">
-          <div class="stsct">
-            <div class="stats">
-              <div class="vote">
-                <span class="vtcnt"><strong><%= question.get_likes.size %></strong></span>
-                <div>votes</div>
-              </div>
-              <div class="status">
-                <strong><%= question.answers.count %></strong>
-                <div>answers</div>
+        <% cache(question_cache_key_of(question)) %>
+          <div class="qsumry">
+            <div class="stsct">
+              <div class="stats">
+                <div class="vote">
+                  <span class="vtcnt"><strong><%= question.get_likes.size %></strong></span>
+                  <div>votes</div>
+                </div>
+                <div class="status">
+                  <strong><%= question.answers.count %></strong>
+                  <div>answers</div>
+                </div>
               </div>
             </div>
+            <div class="sumry">
+              <h3>
+                <%= link_to question.title, question, class: "qlnk" %>
+              </h3>
+            </div>
           </div>
-          <div class="sumry">
-            <h3>
-              <%= link_to question.title, question, class: "qlnk" %>
-            </h3>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
