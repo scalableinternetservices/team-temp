@@ -25,3 +25,5 @@
     <%= link_to "Delete", "/answers/#{answer.id}", method: "delete" %>
   </div>
 <% end %>
+
+<%= will_paginate @answers %>

@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
-    @answers = Answer.where(question_id: params[:id])
+    @answers = Answer.where(question_id: params[:id]).paginate(page: params[:page], per_page: 1)
   end
 
   # GET /questions/new
