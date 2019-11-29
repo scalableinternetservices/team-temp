@@ -27,7 +27,7 @@
   <div class="container">
     <div id="questions">
       <% @questions.each do |question| %>
-        <% cache(question_cache_key_of(question)) %>
+        <% cache(question_cache_key_of(question)) do %>
           <div class="qsumry">
             <div class="stsct">
               <div class="stats">
