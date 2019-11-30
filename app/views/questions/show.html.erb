@@ -20,14 +20,16 @@
 <%= link_to 'Unlike', unlike_question_path(@question), method: "put" %>
 
 <% @answers.each do |answer| %>
-  <div class="ansctnr">
-    <div>User: <%= answer.user_id %></div>
-    <div>Answer: <%= answer.description %></div>
-    <% if current_user != nil && current_user.id == answer.user_id %>
-      <%= link_to "Edit", edit_answer_path(answer) %>
-      <%= link_to "Delete", "/answers/#{answer.id}", method: "delete" %>
-    <% end %>
-  </div>
+  <% cache(answer_cache_key_of(answer)) do %>
+    <div class="ansctnr">
+      <div>User: <%= answer.user_id %></div>
+      <div>Answer: <%= answer.description %></div>
+      <% if current_user != nil && current_user.id == answer.user_id %>
+        <%= link_to "Edit", edit_answer_path(answer) %>
+        <%= link_to "Delete", "/answers/#{answer.id}", method: "delete" %>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
 
 <%= will_paginate @answers %>
