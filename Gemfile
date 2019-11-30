@@ -15,6 +15,7 @@ gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 gem 'acts_as_votable'
 gem 'faker'
+gem 'dalli'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
