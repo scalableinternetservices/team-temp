@@ -11,6 +11,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.json
   def show
     @answers = Answer.where(question_id: params[:id]).paginate(page: params[:page], per_page: 25)
+    fresh_when(@answers)
   end
 
   # GET /questions/new
