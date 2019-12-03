@@ -5,8 +5,8 @@
 # and maximum; this matches the default thread size of Active Record.
 #
 
-workers Integer(ENV['WEB_CONCURRENCY'] || 2)
-threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
+workers Integer(ENV['WEB_CONCURRENCY'] || 3)
+threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 12)
 
 # threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
