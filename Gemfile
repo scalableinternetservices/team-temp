@@ -5,7 +5,7 @@ gem 'rails',      '6.0.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'bcrypt',     '3.1.12'
 gem 'bootstrap-will_paginate', '1.0.0'
-gem 'will_paginate', '3.1.6'
+gem 'will_paginate', '3.1.7'
 gem 'jquery-rails'
 gem 'puma',       '3.12.1'
 gem 'sass-rails', '5.1.0'
@@ -14,6 +14,7 @@ gem 'turbolinks', '5.2.0'
 gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 gem 'acts_as_votable'
+gem 'faker'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'

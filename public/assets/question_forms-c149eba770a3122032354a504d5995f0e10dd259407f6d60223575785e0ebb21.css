@@ -1,0 +1,88 @@
+/* line 1, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+body {
+  background: #eff0f1;
+}
+
+/* line 9, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.adqc {
+  background: #fff;
+  -webkit-box-flex: 1;
+          flex: 1 auto;
+  vertical-align: baseline;
+  display: block;
+  text-align: left;
+  box-sizing: inherit;
+  width: 100%;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+/* line 23, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.adqc form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  box-sizing: inherit;
+}
+
+/* line 29, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.adqc p {
+  margin-top: 5px;
+}
+
+/* line 33, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.adqc a:visited {
+  color: #007bff;
+}
+
+/* line 37, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.fldwrp {
+  width: 100%;
+  margin: 6px 0px 6px 0px;
+}
+
+/* line 42, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.fldwrp label {
+  font-weight: 700;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  color: #0c0d0e;
+}
+
+/* line 50, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.fldwrp input {
+  width: 100%;
+  position: relative;
+}
+
+/* line 55, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.fldwrp textarea {
+  width: 100%;
+}
+
+/* line 59, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.fldcateg {
+  width: 25%;
+  display: inline-block;
+}
+
+/* line 64, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.btnwrp {
+  margin: 6px 0px 0px 0px;
+  width: 100%;
+  display: block;
+}
+
+/* line 70, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.btnwrp.categbtn {
+  width: 25%;
+}
+
+/* line 74, /home/ubuntu/environment/team-temp/app/assets/stylesheets/question_forms.scss */
+.btnwrp input {
+  margin: 6px 0px 0px 0px;
+  width: 100%;
+}
