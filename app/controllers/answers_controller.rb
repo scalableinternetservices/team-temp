@@ -5,7 +5,7 @@ class AnswersController < ApplicationController
   # GET /answers.json
   def index
     #TODO-sql: @answers = Answer.includes(:description).all
-    @answers = Answer.all
+    @answers = Answer.includes(:description).all
   end
 
   # GET /answers/1

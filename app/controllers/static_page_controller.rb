@@ -5,7 +5,7 @@ class StaticPageController < ApplicationController
     @message = "Welcome to our study app!"
     #@questions = Question.all
     #TODO-sql: .includes(...)
-    @questions = Question.search(params[:search]).paginate(page: params[:page], per_page: 25)
+    @questions = Question.includes(:answers).search(params[:search]).paginate(page: params[:page], per_page: 25)
     @session_loggedin = logged_in?
   end
 end

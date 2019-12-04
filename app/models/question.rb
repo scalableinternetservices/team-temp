@@ -11,10 +11,10 @@ class Question < ApplicationRecord
       if category
         self.where(category_id: category)
       else
-        Question.all
+        Question.includes(:answers).all
       end
     else
-      Question.all
+      Question.includes(:answers).all
     end
   end
 end
