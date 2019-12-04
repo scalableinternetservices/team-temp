@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
+    #TODO-sql: .includes(...)
     @questions = Question.search(params[:search])
   end
 
