@@ -28,6 +28,8 @@ Rails.application.routes.draw do
      put 'unlike', to: 'questions#unlike'
     end
   end
-  resources :categories
+  resources :categories do
+    post 'search', :on => :collection
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

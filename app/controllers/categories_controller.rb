@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @questions = @category.questions.paginate(page: params[:page])
+    @questions = @category.questions #.paginate(page: params[:page])
   end
   
   # POST /category
@@ -21,6 +21,10 @@ class CategoriesController < ApplicationController
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  def search
+    @category = Category.search(params[:id])
   end
   
   def destroy

@@ -15,10 +15,14 @@
           <div class="hoftc hohds">Stuck on homeworks? Need study buddies? Don't know how to prepare for exams? It's all in one place!</div>
         </div>
         <div class="srchbrhd">
-          <form class="form-inline my-2 my-lg-0">
-            <input id="srchbar" class="form-control mr-sm-2" type="search" placeholder="Search Subjects" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <!--<form class="form-inline my-2 my-lg-0">-->
+          <!--  <input id="srchbar" class="form-control mr-sm-2" type="search" placeholder="Search Subjects" aria-label="Search">-->
+          <!--  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+          <!--</form>-->
+          <%= form_tag('/', method: :get) do %>
+            <%= text_field_tag(:search, params[:search]) %>
+            <%= submit_tag ("Search") %>
+          <% end %>
         </div>
       </div>
     </div>

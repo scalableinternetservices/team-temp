@@ -9,12 +9,33 @@
   </aside>
   <div class="col-md-8">
     <% if @category.questions.any? %>
-      <h3>Questions (<%= @category.questions.count %>)</h3>
-      <ol class="questions">
-        <%= render @questions %>
-      </ol>
-      <%= will_paginate @questions %>
+        <div class="container">
+          <div id="questions">
+            <% @questions.each do |question| %>
+              <div class="qsumry">
+                <div class="stsct">
+                  <div class="stats">
+                    <div class="vote">
+                      <span class="vtcnt"><strong><%= question.get_likes.size %></strong></span>
+                      <div>votes</div>
+                    </div>
+                    <div class="status">
+                      <strong><%= question.answers.count %></strong>
+                      <div>answers</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sumry">
+                  <h3>
+                    <%= link_to question.title, question, class: "qlnk" %>
+                  </h3>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+    <% else %>
+      <%= link_to "Back to create question", questions_path %>
     <% end %>
   </div>
-  <%= link_to "Back to create question", questions_path %>
 </div>
